@@ -1,7 +1,7 @@
 1. 创建project
     mananer startproject mysite
 
-2. 期待Http服务
+2. 启动Http服务
     manage.py runserver
     manage.py runserver 8080
     manage.py runserver 0.0.0.0:8000
