@@ -1,0 +1,44 @@
+1. 创建project
+    mananer startproject mysite
+
+2. 期待Http服务
+    manage.py runserver
+    manage.py runserver 8080
+    manage.py runserver 0.0.0.0:8000
+
+3.创建app
+    manage.py startapp polls
+
+4.dataBase setup
+    manage.py migrate
+
+5.从自定以model创建 mogrations 里的配置文件
+    manage.py makemigrations polls
+
+6.执行mogrations 中的配置文件，生成sql语句？
+    manage.py sqlmigrate polls 0001
+
+7.根据上一步的SQL语句,生成数据库表
+    manage.py migrate
+
+8.创建admin管理员用户
+    manage.py createsuperuser
+
+9.注册自定义model
+    admin.site.register(Question)  #注册过的在admin中才可见并可进行编辑
+
+
+10.url配置方式
+    cfg:        url(r'^userLogin2/(?P<username>\w+)&(?P<password>\w+)$', views.userLogin2, name='userLogin2'),
+
+    req:        http://127.0.0.1:8000/polls/userLogin2/asdf&11111
+
+    FunDeal:    def userLogin2(request,username,password):
+
+    cfg:        url(r'^userLogin/$', views.userLogin, name='userLogin'),
+
+    req:        http://127.0.0.1:8000/polls/userLogin/?username=yanyuling&password=111111
+
+    FunDeal:    def userLogin(request):
+                    username=request.GET.get('username','')
+                    password=request.GET.get('password','')
