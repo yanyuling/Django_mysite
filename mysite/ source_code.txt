@@ -1,0 +1,84 @@
+模块: django/django/contrib/auth/
+1.django/django/contrib/auth/handlers/modwsgi.py
+    检测用户是否存在<存在时检测密码是否正确>
+    获取用户的group信息
+    注: 代码中涉及到数据库的连接db.reset_queries() 和关闭  db.close_old_connections()
+
+2.django/django/contrib/auth/admin.py
+
+3.django/django/contrib/auth/apps.py
+    貌似实现与app的配置生成相关的代码
+
+4.django/django/contrib/auth/base_user.py
+    BaseUserManager,AbstractBaseUser的定义和实现
+    以及一些和user相关的通用接口<获取名字，密码...>
+
+5.django/django/contrib/auth/checks.py
+    检测用户model,      以及model权限相关
+    check_user_model() check_models_permissions()
+
+6.django/django/contrib/auth/forms.py
+    貌似是定义了一些基础的form，像创建用户，修改密码，等......
+
+7.django/django/contrib/auth/hashers.py
+    用户密码是否正确的检测,用户密码可用性的检测,以及密码相关的hash操作，检测，验证，加密<多种加密算法>
+
+8.django/django/contrib/auth/mixins.py
+    一些用户权限的检测？
+
+9.django/blob/master/django/contrib/auth/models.py
+    User 模块的源码, 权限管理Permission, 用户组管理Group
+
+10.django/django/contrib/auth/signals.py
+    监控用户的登陆，登出，登陆错误状态，创建相关信号，并执行相关广播
+
+11.django/django/contrib/auth/tokens.py
+    实现Token信息的生成和 用户token信息有效性的检测
+
+12.django/django/contrib/auth/validators.py
+    通过正则表达式检测用户名是否符合规则
+
+13.django/django/contrib/auth/middleware.py
+    定义了一些用户认证相关的中间件的操作
+
+14.django/django/contrib/auth/backends.py
+    后端的一些用户认证，和用户权限获取相关的处理
+
+15.django/django/contrib/auth/management/commands/createsuperuser.py
+    创建spueruser的相关代码
+
+16.django/django/contrib/auth/management/commands/changepassword.py
+    修改密码相关
+
+
+
+
+模块: django/django/contrib/admin/
+    后台管理模块?
+1.
+
+
+模块: django/django/conf/
+    定义了 project和app的模板，创建project和app的使用用
+
+
+模块:django/django/dispatch/
+1. django/django/dispatch/weakref_backports.py
+    应该是 处理若引用相关的代码
+
+2.django/django/dispatch/dispatcher.py
+    定义了广播用的 信号object <信号>，实现广播机制？
+
+
+模块:django/django/http/
+1.django/django/http/cookie.py
+    http模块的cookie相关处理 parse_cookie() cookie解析
+
+2.django/django/http/request.py
+    request对象的定义
+
+3.django/django/http/response.py
+    response对象的定义
+
+4.django/django/http/multipartparser.py
+    实现文件上传功能<chunk>

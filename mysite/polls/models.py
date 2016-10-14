@@ -21,7 +21,9 @@ class Question(models.Model):
 
 
 
-#管理类
+
+
+#自定义用户表
 class UserManager(BaseUserManager):
 
     #创建user
@@ -67,7 +69,7 @@ class MyUser(AbstractBaseUser,PermissionsMixin):
     # REQUIRED_FIELDS = ['phone']
     objects = UserManager()
 
-    def get_short_name():
+    def get_phone():
         return self.phone
 
     def has_perm(self, perm, obj=None):
