@@ -6,5 +6,7 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
 # Register your models here.
 from .models import Question
+# from .models import userModel
 
 admin.site.register(Question)
+# admin.site.register(userModel)

@@ -9,13 +9,13 @@
 3.创建app
     manage.py startapp polls
 
-4.dataBase setup
-    manage.py migrate
-
-5.从自定以model创建 mogrations 里的配置文件
+4.从自定以model创建 migrations 里的配置文件
     manage.py makemigrations polls
 
-6.执行mogrations 中的配置文件，生成sql语句？
+5.dataBase setup
+    manage.py migrate
+
+6.migrations 中的配置文件，生成sql语句？
     manage.py sqlmigrate polls 0001
 
 7.根据上一步的SQL语句,生成数据库表

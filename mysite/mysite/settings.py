@@ -69,7 +69,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
-# AUTH_USER_MODEL = "polls.MyUser"
+AUTH_USER_MODEL = "polls.MyUser"
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases

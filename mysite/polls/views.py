@@ -25,7 +25,7 @@ def userLogin(request):
         password=request.POST.get('password','')
         user= authenticate(username=username,password=password)
         if user is not  None:
-            return HttpResponse(phone + '   POST   ' +password)
+            return HttpResponse("Login successfully")
         return userRegister(request)
 
     else:
@@ -33,7 +33,7 @@ def userLogin(request):
         password=request.GET.get('password','')
         user= authenticate(username=username,password=password)
         if user is not  None:
-            return HttpResponse(phone + '   GET   ' +password )
+            return HttpResponse("Login successfully")
         return userRegister(request)
 
 
